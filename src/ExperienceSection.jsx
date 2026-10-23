@@ -2,7 +2,6 @@ import ProjectGallery from "./ProjectGallery";
 
 export default function ExperienceSection({ items, L, labels }) {
   const featured = items.filter((e) => e.featured);
-  const others = items.filter((e) => !e.featured);
 
   return (
     <div className="exp-wrap">
@@ -55,28 +54,6 @@ export default function ExperienceSection({ items, L, labels }) {
           </article>
         );
       })}
-
-      {others.length > 0 && (
-        <div className="exp-others">
-          <h3 className="exp-others-heading">{labels.other}</h3>
-          <ul className="timeline exp-timeline">
-            {others.map((e, i) => (
-              <li
-                key={i}
-                className="timeline-row"
-                data-reveal
-                style={{ "--i": i }}
-              >
-                <span className="timeline-date">{L(e.date)}</span>
-                <div>
-                  <h3>{L(e.title)}</h3>
-                  <p>{L(e.detail)}</p>
-                </div>
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
     </div>
   );
 }
