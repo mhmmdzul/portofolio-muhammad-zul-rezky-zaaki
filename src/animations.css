@@ -2381,3 +2381,19 @@ section#contact {
     padding-bottom: clamp(24px, 5vh, 56px);
   }
 }
+
+/* ── 38. Portfolio: judul tidak terpotong, jarak atas lebih rapat ── */
+
+/* Matikan trik -96px dari bagian 34 di semua ukuran layar */
+section#about,
+section#portfolio,
+section#contact {
+  scroll-margin-top: 0 !important;
+}
+
+/* Di laptop: jarak judul Portfolio ke header disamakan dengan About */
+@media (min-width: 901px) {
+  section#portfolio {
+    padding-top: clamp(24px, 5vh, 56px);
+  }
+}
