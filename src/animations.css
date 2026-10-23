@@ -2371,3 +2371,13 @@ section#contact {
     justify-content: center;
   }
 }
+
+/* ── 37. Perkecil jarak atas-bawah About & Contact supaya muat 1 layar ── */
+
+@media (min-width: 901px) {
+  section#about,
+  section#contact {
+    padding-top: clamp(24px, 5vh, 56px);
+    padding-bottom: clamp(24px, 5vh, 56px);
+  }
+}
