@@ -2337,3 +2337,23 @@ section#contact {
     justify-self: end;
   }
 }
+
+/* ── 35. Hero muat di layar pendek / saat browser di-zoom ── */
+
+@media (min-width: 901px) {
+  .hero {
+    min-height: calc(100vh - var(--header-h, 70px));
+    min-height: calc(100svh - var(--header-h, 70px));
+    padding-block: clamp(16px, 4vh, 56px);
+    align-items: center;
+  }
+
+  /* Lebar kartu ikut tinggi layar: layar pendek → kartu sedikit mengecil */
+  .hero-idcard {
+    width: clamp(
+      200px,
+      calc((100svh - var(--header-h, 70px) - 240px) / 1.75),
+      270px
+    );
+  }
+}
