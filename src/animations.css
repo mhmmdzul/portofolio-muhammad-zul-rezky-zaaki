@@ -2357,3 +2357,17 @@ section#contact {
     );
   }
 }
+
+/* ── 36. About & Contact setinggi layar, isi di tengah ── */
+
+@media (min-width: 901px) {
+  section#about,
+  section#contact {
+    scroll-margin-top: 0 !important;
+    min-height: calc(100vh - var(--header-h, 70px));
+    min-height: calc(100svh - var(--header-h, 70px));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
