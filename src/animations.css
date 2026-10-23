@@ -2313,3 +2313,27 @@ section[id] {
   position: sticky;
   z-index: 40;
 }
+
+/* ── 34. About lebih di tengah + posisi berhenti menu lebih pas ── */
+
+/* Saat klik menu, halaman berhenti sedikit lebih ke bawah,
+   supaya jarak kosong di atas judul tidak terlalu besar */
+section#about,
+section#portfolio,
+section#contact {
+  scroll-margin-top: -96px !important;
+}
+
+/* Isi About dikumpulkan di tengah, sejajar dengan hero */
+@media (min-width: 901px) {
+  .about-layout {
+    max-width: 1100px;
+    margin-inline: auto;
+    padding-inline: 32px;
+    align-items: center;
+  }
+
+  .about-visual {
+    justify-self: end;
+  }
+}
