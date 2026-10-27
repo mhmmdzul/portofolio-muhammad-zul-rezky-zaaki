@@ -435,7 +435,7 @@ export default function App() {
       contactForm.subject || t.mailDefaultSubject,
     );
     const body = encodeURIComponent(
-      `${contactForm.message}\n\n— ${contactForm.name} (${contactForm.email})`,
+      `${contactForm.message}\n\nFrom: ${contactForm.name} (${contactForm.email})`,
     );
     window.location.href = `mailto:${profile.email}?subject=${subject}&body=${body}`;
   };

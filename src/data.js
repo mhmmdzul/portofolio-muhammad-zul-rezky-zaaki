@@ -20,8 +20,8 @@ export const stats = [
   {
     value: "3.73",
     label: {
-      en: "GPA — Cum Laude, Telkom University",
-      id: "IPK — Cum Laude, Telkom University",
+      en: "Cum Laude GPA, Telkom University",
+      id: "IPK Cum Laude, Telkom University",
     },
   },
   { value: "5", label: { en: "Featured projects", id: "Proyek unggulan" } },
@@ -144,7 +144,7 @@ export const translations = {
     kicker: "Hello, I am",
     tagline: "Ready for impact",
     heroBlurb:
-      "I turn data into decisions and build AI that works in the real world — from computer vision systems to workflow automation.",
+      "I turn data into decisions and build AI that works in the real world, from computer vision systems to workflow automation.",
     openToLabel: "Open to",
     openToRoles: ["Data Analyst", "AI Engineer", "ML Engineer"],
     idcardHint: "↕ Drag the card",
@@ -160,7 +160,7 @@ export const translations = {
     downloadCv: "Download CV",
     openToWork: "Open to work",
     bio: [
-      "IT fresh graduate with hands-on experience across full-stack development, machine learning, and data processing — including a Full-Stack Developer internship at IPDN and a published IEEE conference paper on deep learning-based waste classification.",
+      "IT fresh graduate with hands-on experience across full-stack development, machine learning, and data processing, including a Full-Stack Developer internship at IPDN and a published IEEE conference paper on deep learning-based waste classification.",
       "Beyond technical skills, I bring proven leadership experience as Vice Chair of a 500+ member student organization, sharpening my team management and cross-divisional coordination skills.",
     ],
     portfolioLead: "Portfolio",
@@ -212,7 +212,7 @@ export const translations = {
     kicker: "Halo, saya",
     tagline: "Siap memberi dampak",
     heroBlurb:
-      "Saya mengubah data menjadi keputusan dan membangun AI yang bekerja di dunia nyata — dari sistem computer vision hingga otomasi alur kerja.",
+      "Saya mengubah data menjadi keputusan dan membangun AI yang bekerja di dunia nyata, mulai dari sistem computer vision hingga otomasi alur kerja.",
     openToLabel: "Terbuka untuk posisi",
     openToRoles: ["Data Analyst", "AI Engineer", "ML Engineer"],
     idcardHint: "↕ Tarik kartunya",
@@ -228,7 +228,7 @@ export const translations = {
     downloadCv: "Unduh CV",
     openToWork: "Terbuka untuk kerja",
     bio: [
-      "Lulusan baru Informatika Telkom University dengan pengalaman langsung di full-stack development, machine learning, dan pemrosesan data — termasuk magang Full-Stack Developer di IPDN dan paper IEEE terpublikasi tentang klasifikasi sampah berbasis deep learning.",
+      "Lulusan baru Informatika Telkom University dengan pengalaman langsung di full-stack development, machine learning, dan pemrosesan data, termasuk magang Full-Stack Developer di IPDN dan paper IEEE terpublikasi tentang klasifikasi sampah berbasis deep learning.",
       "Selain kemampuan teknis, saya membawa pengalaman kepemimpinan sebagai Wakil Ketua organisasi mahasiswa beranggotakan 500+ orang, mengasah kemampuan manajemen tim dan koordinasi lintas divisi.",
     ],
     portfolioLead: "Portofolio",
@@ -295,8 +295,8 @@ const projectList = [
       id: "Arsitektur hybrid dua cabang yang menggabungkan Swin Transformer dan ConvNeXt untuk klasifikasi biner sampah, dibandingkan dengan ViT, DenseNet121, dan EfficientNet-B0 pada dataset Kaggle berisi 15.515 gambar dengan ketidakseimbangan kelas yang signifikan. Ketidakseimbangan ditangani dengan weighted loss dan oversampling, sementara Grad-CAM dan t-SNE dipakai untuk interpretabilitas model.",
     },
     problem: {
-      en: "Manual waste sorting is slow and error-prone, and automated classifiers trained on real-world data face severe class imbalance (89% vs. 11%) — a model can score high accuracy while still missing the minority class. Single-architecture models also tend to capture either local texture (CNNs) or global context (Transformers), but rarely both.",
-      id: "Pemilahan sampah secara manual lambat dan rawan kesalahan, sementara classifier otomatis yang dilatih dengan data dunia nyata menghadapi ketidakseimbangan kelas yang parah (89% vs. 11%) — model bisa meraih akurasi tinggi tetapi tetap gagal mengenali kelas minoritas. Model dengan satu arsitektur juga cenderung hanya menangkap tekstur lokal (CNN) atau konteks global (Transformer), jarang keduanya.",
+      en: "Manual waste sorting is slow and error-prone, and automated classifiers trained on real-world data face severe class imbalance (89% vs. 11%), so a model can score high accuracy while still missing the minority class. Single-architecture models also tend to capture either local texture (CNNs) or global context (Transformers), but rarely both.",
+      id: "Pemilahan sampah secara manual lambat dan rawan kesalahan, sementara classifier otomatis yang dilatih dengan data dunia nyata menghadapi ketidakseimbangan kelas yang parah (89% vs. 11%), sehingga model bisa meraih akurasi tinggi tetapi tetap gagal mengenali kelas minoritas. Model dengan satu arsitektur juga cenderung hanya menangkap tekstur lokal (CNN) atau konteks global (Transformer), jarang keduanya.",
     },
     solution: {
       en: "Designed SwinConvNeXt, a parallel dual-branch model that fuses Swin Transformer's global context with ConvNeXt's local texture features. Countered the imbalance with weighted loss and oversampling, benchmarked against ViT, DenseNet121, and EfficientNet-B0, and verified what the model learned with Grad-CAM and t-SNE. It reached 98.75% accuracy and 99.74% ROC-AUC, with better organic-waste recall (96.43%) than EfficientNet-B0, which had higher overall accuracy.",
@@ -347,12 +347,12 @@ const projectList = [
     },
     title: { en: "Autonomous Tank Robot", id: "Robot Tank Otonom" },
     description: {
-      en: "A team-built autonomous tank robot combining embedded hardware control with real-time computer vision — handling obstacle detection, object recognition, and remote operation through a live web dashboard.",
-      id: "Robot tank otonom yang dibangun bersama tim, menggabungkan kendali perangkat keras tertanam dengan computer vision real-time — menangani deteksi rintangan, pengenalan objek, dan kendali jarak jauh melalui dashboard web langsung.",
+      en: "A team-built autonomous tank robot combining embedded hardware control with real-time computer vision. It handles obstacle detection, object recognition, and remote operation through a live web dashboard.",
+      id: "Robot tank otonom yang dibangun bersama tim, menggabungkan kendali perangkat keras tertanam dengan computer vision real-time. Robot ini menangani deteksi rintangan, pengenalan objek, dan kendali jarak jauh melalui dashboard web langsung.",
     },
     problem: {
-      en: "An autonomous robot has to detect obstacles, recognize objects, and react in real time — all on low-power onboard hardware that can't run heavy models — while operators still need to see what the robot sees and take over when necessary.",
-      id: "Robot otonom harus mendeteksi rintangan, mengenali objek, dan bereaksi secara real-time — semuanya di perangkat keras berdaya rendah yang tidak mampu menjalankan model berat — sementara operator tetap perlu melihat apa yang dilihat robot dan mengambil alih kendali saat diperlukan.",
+      en: "An autonomous robot has to detect obstacles, recognize objects, and react in real time, all on low-power onboard hardware that can't run heavy models. At the same time, operators still need to see what the robot sees and take over when necessary.",
+      id: "Robot otonom harus mendeteksi rintangan, mengenali objek, dan bereaksi secara real-time, semuanya di perangkat keras berdaya rendah yang tidak mampu menjalankan model berat. Di saat yang sama, operator tetap perlu melihat apa yang dilihat robot dan mengambil alih kendali saat diperlukan.",
     },
     solution: {
       en: "Split the workload across two controllers: a Raspberry Pi for vision and high-level logic, and an Arduino for LIDAR-based obstacle detection and motor control. Optimized a YOLOv8-Nano detector with TensorFlow Lite for real-time inference on the edge, and built a Flask + WebSocket dashboard for live video streaming and gamepad teleoperation.",
@@ -404,8 +404,8 @@ const projectList = [
       },
     ],
     meta: {
-      en: "Team project — 5 members · Sep – Dec 2025",
-      id: "Proyek tim — 5 anggota · Sep – Des 2025",
+      en: "Team project, 5 members · Sep – Dec 2025",
+      id: "Proyek tim, 5 anggota · Sep – Des 2025",
     },
     link: "",
     githubUrl: "",
@@ -436,12 +436,12 @@ const projectList = [
       id: "Sistem pengenalan wajah berbasis web yang saya bangun selama magang di IPDN untuk mengidentifikasi praja dari satu foto. Alih-alih mencocokkan ratusan praja dengan datanya secara manual, staf cukup mengunggah foto dan sistem menampilkan nama serta NPP praja, sementara dashboard admin memungkinkan staf mendaftarkan praja baru dan melatih ulang model tanpa menyentuh kode.",
     },
     problem: {
-      en: "IPDN manages hundreds of cadets (praja), and identifying a cadet from a photo meant manually matching faces to names and NPP numbers — slow and prone to mistakes. Any solution also had to be maintainable by non-technical staff as new cadets join.",
-      id: "IPDN mengelola ratusan praja, dan mengidentifikasi praja dari sebuah foto berarti mencocokkan wajah dengan nama dan NPP secara manual — lambat dan rawan kesalahan. Solusinya juga harus bisa dikelola oleh staf non-teknis setiap kali ada praja baru.",
+      en: "IPDN manages hundreds of cadets (praja), and identifying a cadet from a photo meant matching faces to names and NPP numbers by hand, which was slow and prone to mistakes. Any solution also had to be maintainable by non-technical staff as new cadets join.",
+      id: "IPDN mengelola ratusan praja, dan mengidentifikasi praja dari sebuah foto berarti mencocokkan wajah dengan nama dan NPP secara manual, yang lambat dan rawan kesalahan. Solusinya juga harus bisa dikelola oleh staf non-teknis setiap kali ada praja baru.",
     },
     solution: {
-      en: "Built a face recognition system that detects faces with MTCNN, encodes them with FaceNet, and classifies identity with a linear SVM. Staff upload a photo and instantly receive the cadet's name and NPP, while an admin dashboard lets them register new cadets with multiple photos and retrain the model in one click — no code required.",
-      id: "Membangun sistem pengenalan wajah yang mendeteksi wajah dengan MTCNN, mengubahnya menjadi embedding dengan FaceNet, dan mengklasifikasikan identitas dengan linear SVM. Staf cukup mengunggah foto dan langsung mendapatkan nama serta NPP praja, sementara dashboard admin memungkinkan staf mendaftarkan praja baru beserta beberapa foto dan melatih ulang model dengan satu klik — tanpa perlu menulis kode.",
+      en: "Built a face recognition system that detects faces with MTCNN, encodes them with FaceNet, and classifies identity with a linear SVM. Staff upload a photo and instantly receive the cadet's name and NPP, while an admin dashboard lets them register new cadets with multiple photos and retrain the model in one click, with no code required.",
+      id: "Membangun sistem pengenalan wajah yang mendeteksi wajah dengan MTCNN, mengubahnya menjadi embedding dengan FaceNet, dan mengklasifikasikan identitas dengan linear SVM. Staf cukup mengunggah foto dan langsung mendapatkan nama serta NPP praja, sementara dashboard admin memungkinkan staf mendaftarkan praja baru beserta beberapa foto dan melatih ulang model dengan satu klik tanpa perlu menulis kode.",
     },
     techStack: [
       "Python",
@@ -519,16 +519,16 @@ const projectList = [
       id: "Chatbot Asisten Praja dengan AI Agent n8n",
     },
     description: {
-      en: "A Telegram chatbot for IPDN cadets (praja) powered by an n8n AI agent and Google Gemini. Cadets chat in natural language to look up their data, find learning resources, and get help with routine tasks — the agent decides which tool to use, from Google Sheets lookups to sending Gmail messages and creating Google Calendar events.",
-      id: "Chatbot Telegram untuk praja IPDN yang ditenagai AI agent n8n dan Google Gemini. Praja cukup mengobrol dengan bahasa sehari-hari untuk mencari data, menemukan materi belajar, dan dibantu urusan rutin — agent memilih sendiri tool yang dipakai, mulai dari mencari data di Google Sheets hingga mengirim Gmail dan membuat jadwal di Google Calendar.",
+      en: "A Telegram chatbot for IPDN cadets (praja) powered by an n8n AI agent and Google Gemini. Cadets chat in natural language to look up their data, find learning resources, and get help with routine tasks. The agent decides which tool to use, from Google Sheets lookups to sending Gmail messages and creating Google Calendar events.",
+      id: "Chatbot Telegram untuk praja IPDN yang ditenagai AI agent n8n dan Google Gemini. Praja cukup mengobrol dengan bahasa sehari-hari untuk mencari data, menemukan materi belajar, dan dibantu urusan rutin. Agent memilih sendiri tool yang dipakai, mulai dari mencari data di Google Sheets hingga mengirim Gmail dan membuat jadwal di Google Calendar.",
     },
     problem: {
-      en: "Assignments are posted on IPDN's Learning Management System (LMS), but the LMS sends no notifications — cadets have to check it manually and can easily miss deadlines, especially while off campus. Reporting attendance, permission, or sick leave to their supervisors (pembina) is also done manually, and everyday information is scattered across different spreadsheets.",
-      id: "Tugas diunggah di Learning Management System (LMS) IPDN, tetapi LMS tidak mengirim notifikasi — praja harus mengeceknya sendiri dan mudah terlewat tenggatnya, apalagi saat pesiar. Pelaporan kehadiran, izin, atau sakit kepada pembina juga masih manual, dan informasi sehari-hari tersebar di berbagai spreadsheet.",
+      en: "Assignments are posted on IPDN's Learning Management System (LMS), but the LMS sends no notifications, so cadets have to check it manually and can easily miss deadlines, especially while off campus. Reporting attendance, permission, or sick leave to their supervisors (pembina) is also done manually, and everyday information is scattered across different spreadsheets.",
+      id: "Tugas diunggah di Learning Management System (LMS) IPDN, tetapi LMS tidak mengirim notifikasi, sehingga praja harus mengeceknya sendiri dan mudah terlewat tenggatnya, apalagi saat pesiar. Pelaporan kehadiran, izin, atau sakit kepada pembina juga masih manual, dan informasi sehari-hari tersebar di berbagai spreadsheet.",
     },
     solution: {
-      en: "Built a Telegram bot backed by an n8n AI agent that uses Google Gemini to understand free-form messages and short-term memory to follow the conversation. The agent is connected to tools — Google Sheets (cadet data, learning resources, email list, important dates), Gmail, and Google Calendar — so one chat can answer questions and take actions. The prototype lays the foundation for automatic LMS assignment reminders and attendance/leave reporting to supervisors.",
-      id: "Membangun bot Telegram yang didukung AI agent n8n: Google Gemini memahami pesan bebas, dan memori jangka pendek menjaga alur percakapan. Agent terhubung ke berbagai tool — Google Sheets (data praja, materi belajar, daftar email, tanggal penting), Gmail, dan Google Calendar — sehingga satu chat bisa menjawab pertanyaan sekaligus menjalankan aksi. Prototipe ini menjadi fondasi untuk pengingat tugas LMS otomatis dan pelaporan kehadiran/izin kepada pembina.",
+      en: "Built a Telegram bot backed by an n8n AI agent that uses Google Gemini to understand free-form messages and short-term memory to follow the conversation. The agent is connected to Google Sheets (cadet data, learning resources, email list, important dates), Gmail, and Google Calendar, so one chat can answer questions and take actions. The prototype lays the foundation for automatic LMS assignment reminders and attendance/leave reporting to supervisors.",
+      id: "Membangun bot Telegram yang didukung AI agent n8n: Google Gemini memahami pesan bebas, dan memori jangka pendek menjaga alur percakapan. Agent terhubung ke Google Sheets (data praja, materi belajar, daftar email, tanggal penting), Gmail, dan Google Calendar, sehingga satu chat bisa menjawab pertanyaan sekaligus menjalankan aksi. Prototipe ini menjadi fondasi untuk pengingat tugas LMS otomatis dan pelaporan kehadiran/izin kepada pembina.",
     },
     techStack: [
       "n8n",
@@ -601,12 +601,12 @@ const projectList = [
       id: "Prediksi Harga Saham Tesla (TSLA) dengan LSTM",
     },
     description: {
-      en: "Time-series forecasting of Tesla's daily closing price using five LSTM-based models — baseline LSTM, BiLSTM, CNN-LSTM, a manually tuned LSTM, and an LSTM tuned automatically with Keras Tuner — trained on 10 years of Yahoo Finance data and compared with RMSE and MAPE.",
-      id: "Peramalan time series harga penutupan harian saham Tesla menggunakan lima model berbasis LSTM — LSTM baseline, BiLSTM, CNN-LSTM, LSTM tuning manual, dan LSTM yang di-tuning otomatis dengan Keras Tuner — dilatih dengan data Yahoo Finance selama 10 tahun dan dibandingkan menggunakan RMSE dan MAPE.",
+      en: "Time-series forecasting of Tesla's daily closing price using five LSTM-based models: baseline LSTM, BiLSTM, CNN-LSTM, a manually tuned LSTM, and an LSTM tuned automatically with Keras Tuner. The models were trained on 10 years of Yahoo Finance data and compared with RMSE and MAPE.",
+      id: "Peramalan time series harga penutupan harian saham Tesla menggunakan lima model berbasis LSTM: LSTM baseline, BiLSTM, CNN-LSTM, LSTM tuning manual, dan LSTM yang di-tuning otomatis dengan Keras Tuner. Model dilatih dengan data Yahoo Finance selama 10 tahun dan dibandingkan menggunakan RMSE dan MAPE.",
     },
     problem: {
-      en: "Stock prices are noisy, non-stationary, and prone to sudden jumps — TSLA shows long calm periods followed by extreme volatility and fat-tailed returns. A single architecture rarely handles this well, so the question is which LSTM design best learns from recent price history to predict the next day's close.",
-      id: "Harga saham penuh noise, tidak stasioner, dan rawan lonjakan mendadak — TSLA memiliki periode tenang yang panjang lalu diikuti volatilitas ekstrem dan return dengan fat tails. Satu arsitektur jarang mampu menangani ini dengan baik, sehingga pertanyaannya adalah desain LSTM mana yang paling baik belajar dari riwayat harga terbaru untuk memprediksi harga penutupan esok hari.",
+      en: "Stock prices are noisy, non-stationary, and prone to sudden jumps. TSLA shows long calm periods followed by extreme volatility and fat-tailed returns. A single architecture rarely handles this well, so the question is which LSTM design best learns from recent price history to predict the next day's close.",
+      id: "Harga saham penuh noise, tidak stasioner, dan rawan lonjakan mendadak. TSLA memiliki periode tenang yang panjang lalu diikuti volatilitas ekstrem dan return dengan fat tails. Satu arsitektur jarang mampu menangani ini dengan baik, sehingga pertanyaannya adalah desain LSTM mana yang paling baik belajar dari riwayat harga terbaru untuk memprediksi harga penutupan esok hari.",
     },
     solution: {
       en: "Built an end-to-end pipeline: EDA on trend, rolling volatility, log returns, and Z-score outliers; a chronological train/validation/test split (2015–2023 / 2024 / 2025); MinMax scaling and 60-day sliding windows; then five LSTM variants trained with early stopping and learning-rate scheduling. The Keras Tuner model performed best with an RMSE of $14.68 and MAPE of 4.16%, about 31% lower error than the baseline.",
@@ -638,8 +638,8 @@ const projectList = [
       ],
     },
     meta: {
-      en: "Machine Learning course project · Group of 3 — built the full pipeline · May – Jun 2025",
-      id: "Tugas besar Machine Learning · Kelompok 3 orang — mengerjakan seluruh pipeline · Mei – Jun 2025",
+      en: "Machine Learning course project · Group of 3 (built the full pipeline) · May – Jun 2025",
+      id: "Tugas besar Machine Learning · Kelompok 3 orang (mengerjakan seluruh pipeline) · Mei – Jun 2025",
     },
     link: "",
     githubUrl: "https://github.com/mhmmdzul/TSLA-Stock-Prediction-LSTM",
@@ -664,8 +664,8 @@ const projectList = [
       {
         src: "/projects/tsla-rolling-volatility.jpg",
         caption: {
-          en: "30-day rolling mean and volatility — volatility rises sharply from 2020 onward.",
-          id: "Rata-rata bergerak dan volatilitas 30 hari — volatilitas meningkat tajam sejak 2020.",
+          en: "30-day rolling mean and volatility. Volatility rises sharply from 2020 onward.",
+          id: "Rata-rata bergerak dan volatilitas 30 hari. Volatilitas meningkat tajam sejak 2020.",
         },
       },
       {
@@ -691,8 +691,8 @@ export const certificates = [
     image: "/certificates/aims-2026-presenter.jpg",
     issuer: "IEEE Indonesia CSS/RAS · AIMS 2026",
     title: {
-      en: "Presenter — International Conference on AI and Mechatronics Systems",
-      id: "Presenter — Konferensi Internasional AI dan Sistem Mekatronika",
+      en: "Presenter at the International Conference on AI and Mechatronics Systems",
+      id: "Presenter di Konferensi Internasional AI dan Sistem Mekatronika",
     },
     date: { en: "July 2026", id: "Juli 2026" },
   },
@@ -709,8 +709,8 @@ export const certificates = [
     image: "/certificates/ipdn-internship.jpg",
     issuer: "Institut Pemerintahan Dalam Negeri (IPDN)",
     title: {
-      en: "Internship — Data Management & Information Systems Unit",
-      id: "Magang — Lembaga Pengelolaan Data dan Sistem Informasi",
+      en: "Internship at the Data Management & Information Systems Unit",
+      id: "Magang di Lembaga Pengelolaan Data dan Sistem Informasi",
     },
     date: { en: "Aug 2025", id: "Agu 2025" },
   },
@@ -718,8 +718,8 @@ export const certificates = [
     image: "/certificates/badminton-superseries-2025.jpg",
     issuer: "Telkom University Badminton Club",
     title: {
-      en: "1st Place — Men's Doubles, Superseries 2025",
-      id: "Juara 1 — Ganda Putra, Superseries 2025",
+      en: "1st Place, Men's Doubles, Superseries 2025",
+      id: "Juara 1 Ganda Putra, Superseries 2025",
     },
     date: "Nov 2025",
   },
@@ -727,8 +727,8 @@ export const certificates = [
     image: "/certificates/tubc-internal-coordinator-2024.jpg",
     issuer: "Telkom University Badminton Club",
     title: {
-      en: "Certificate of Appreciation — Internal Division Coordinator",
-      id: "Sertifikat Apresiasi — Koordinator Divisi Internal",
+      en: "Certificate of Appreciation: Internal Division Coordinator",
+      id: "Sertifikat Apresiasi: Koordinator Divisi Internal",
     },
     date: "2024",
   },
@@ -736,8 +736,8 @@ export const certificates = [
     image: "/certificates/leadership-softskill.jpg",
     issuer: "Telkom University",
     title: {
-      en: "Soft Skills Development III — Leadership",
-      id: "Pengembangan Softskill III — Leadership",
+      en: "Soft Skills Development III: Leadership",
+      id: "Pengembangan Softskill III: Leadership",
     },
     date: "Sep 2025",
   },
@@ -745,8 +745,8 @@ export const certificates = [
     image: "/certificates/telu-career-coach.jpg",
     issuer: "Telkom University",
     title: {
-      en: "Tel-U Career Coach (STAR) — Distance Learning",
-      id: "Tel-U Career Coach (STAR) — Pembelajaran Jarak Jauh",
+      en: "Tel-U Career Coach (STAR): Distance Learning",
+      id: "Tel-U Career Coach (STAR): Pembelajaran Jarak Jauh",
     },
     date: "2025",
   },
@@ -754,8 +754,8 @@ export const certificates = [
     image: "/certificates/lkmm-tm.jpg",
     issuer: "Telkom University",
     title: {
-      en: "LKMM-TM — Intermediate Student Management Skills Training",
-      id: "LKMM-TM — Latihan Keterampilan Manajemen Mahasiswa Tingkat Menengah",
+      en: "LKMM-TM: Intermediate Student Management Skills Training",
+      id: "LKMM-TM: Latihan Keterampilan Manajemen Mahasiswa Tingkat Menengah",
     },
     date: "Feb 2025",
   },
@@ -763,8 +763,8 @@ export const certificates = [
     image: "/certificates/lkmm-td.jpg",
     issuer: "Telkom University",
     title: {
-      en: "LKMM-TD — Basic Student Management Skills Training",
-      id: "LKMM-TD — Latihan Keterampilan Manajemen Mahasiswa Tingkat Dasar",
+      en: "LKMM-TD: Basic Student Management Skills Training",
+      id: "LKMM-TD: Latihan Keterampilan Manajemen Mahasiswa Tingkat Dasar",
     },
     date: "Feb 2025",
   },
@@ -772,8 +772,8 @@ export const certificates = [
     image: "/certificates/tubc-internal-2023.jpg",
     issuer: "Telkom University Badminton Club",
     title: {
-      en: "Certificate of Appreciation — Internal Division Member",
-      id: "Sertifikat Apresiasi — Anggota Divisi Internal",
+      en: "Certificate of Appreciation: Internal Division Member",
+      id: "Sertifikat Apresiasi: Anggota Divisi Internal",
     },
     date: "2023",
   },
@@ -798,8 +798,8 @@ export const experience = [
       id: "Lembaga Pengelolaan Data dan Sistem Informasi",
     },
     detail: {
-      en: "Built web, data, and AI tools for IPDN's data and information systems unit — from the cadets' learning platform to computer vision and NLP prototypes that support campus administration.",
-      id: "Membangun tools web, data, dan AI untuk unit pengelolaan data dan sistem informasi IPDN — mulai dari platform pembelajaran praja hingga prototipe computer vision dan NLP yang mendukung administrasi kampus.",
+      en: "Built web, data, and AI tools for IPDN's data and information systems unit, from the cadets' learning platform to computer vision and NLP prototypes that support campus administration.",
+      id: "Membangun tools web, data, dan AI untuk unit pengelolaan data dan sistem informasi IPDN, mulai dari platform pembelajaran praja hingga prototipe computer vision dan NLP yang mendukung administrasi kampus.",
     },
     bullets: {
       en: [
@@ -844,8 +844,8 @@ export const experience = [
     date: "Jul 2026",
     title: "Presenter, AIMS 2026",
     detail: {
-      en: "International Conference on Artificial Intelligence and Mechatronics Systems — presented the SwinConvNeXt waste detection paper, co-authored with Putu Harry Gunawan.",
-      id: "International Conference on Artificial Intelligence and Mechatronics Systems — mempresentasikan paper deteksi sampah SwinConvNeXt yang ditulis bersama Putu Harry Gunawan.",
+      en: "Presented the SwinConvNeXt waste detection paper, co-authored with Putu Harry Gunawan, at the International Conference on Artificial Intelligence and Mechatronics Systems.",
+      id: "Mempresentasikan paper deteksi sampah SwinConvNeXt yang ditulis bersama Putu Harry Gunawan di International Conference on Artificial Intelligence and Mechatronics Systems.",
     },
   },
   {
