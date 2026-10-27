@@ -473,8 +473,8 @@ const projectList = [
       ],
     },
     meta: {
-      en: "Internship project · Institut Pemerintahan Dalam Negeri (IPDN) · Jul – Sep 2025",
-      id: "Proyek magang · Institut Pemerintahan Dalam Negeri (IPDN) · Jul – Sep 2025",
+      en: "Internship project · Institut Pemerintahan Dalam Negeri (IPDN) · Jul – Aug 2025",
+      id: "Proyek magang · Institut Pemerintahan Dalam Negeri (IPDN) · Jul – Agu 2025",
     },
     link: "",
     githubUrl: "https://github.com/mhmmdzul/project_deteksi_wajah_ipdn",
