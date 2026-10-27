@@ -526,10 +526,10 @@ export default function App() {
         <a
           href="#home"
           className="brand"
+          aria-label={profile.name}
           onClick={() => setSelectedProject(null)}
         >
           <span className="brand-accent">{initials(profile.name)}</span>
-          <span className="brand-word">Zul Rezky Zaaki</span>
         </a>
 
         <nav className={`nav ${navOpen ? "nav--open" : ""}`}>
