@@ -24,7 +24,7 @@ export const stats = [
       id: "IPK Cum Laude, Telkom University",
     },
   },
-  { value: "5", label: { en: "Featured projects", id: "Proyek unggulan" } },
+  { value: "6", label: { en: "Featured projects", id: "Proyek unggulan" } },
   { value: "10", label: { en: "Certificates", id: "Sertifikat" } },
 ];
 
@@ -677,10 +677,118 @@ const projectList = [
       },
     ],
   },
+  {
+    year: "2026",
+    highlight: {
+      en: "96K orders · 7 business questions",
+      id: "96 ribu pesanan · 7 pertanyaan bisnis",
+    },
+    category: {
+      en: "Data Analysis · SQL · Dashboard",
+      id: "Analisis Data · SQL · Dashboard",
+    },
+    title: {
+      en: "Olist E-Commerce Analysis: Growth, Delivery & Retention",
+      id: "Analisis E-Commerce Olist: Pertumbuhan, Pengiriman & Retensi",
+    },
+    description: {
+      en: "End-to-end analysis of 96,203 orders from Olist, a Brazilian online marketplace. SQL queries in DuckDB answer seven business questions on growth, categories, delivery, regions, retention, RFM segments, and payments, with the results presented in a Python notebook and an interactive dashboard.",
+      id: "Analisis end-to-end terhadap 96.203 pesanan dari Olist, marketplace online di Brasil. Query SQL di DuckDB menjawab tujuh pertanyaan bisnis tentang pertumbuhan, kategori, pengiriman, wilayah, retensi, segmen RFM, dan pembayaran, lalu hasilnya disajikan dalam notebook Python dan dashboard interaktif.",
+    },
+    problem: {
+      en: "Olist's monthly revenue grew quickly through 2017 and then flattened in 2018. The data is spread across 8 related tables (orders, customers, items, payments, reviews, products, sellers, categories), so understanding why growth stalled and what to fix first needs careful joining, cleaning, and a clear link between operations and customer behavior.",
+      id: "Revenue bulanan Olist tumbuh cepat sepanjang 2017 lalu stagnan di 2018. Datanya tersebar di 8 tabel yang saling terhubung (pesanan, pelanggan, item, pembayaran, ulasan, produk, penjual, kategori), sehingga untuk memahami penyebab pertumbuhan melambat dan apa yang harus diperbaiki lebih dulu, data perlu digabung dan dibersihkan dengan hati-hati, lalu dihubungkan antara sisi operasional dan perilaku pelanggan.",
+    },
+    solution: {
+      en: "Built one clean order-level table in SQL, then wrote a separate query for each business question using joins, CTEs, and window functions (LAG, NTILE, ROW_NUMBER). The analysis found that late orders average 2.3 stars versus 4.3 for on-time orders, that only 3% of customers ever buy again, and that two high-value RFM segments hold about 56% of revenue. Each finding comes with a concrete recommendation, and the dashboard lets users filter every metric by region and state.",
+      id: "Membangun satu tabel bersih tingkat pesanan dengan SQL, lalu menulis query terpisah untuk setiap pertanyaan bisnis menggunakan join, CTE, dan window function (LAG, NTILE, ROW_NUMBER). Hasil analisis menunjukkan pesanan yang terlambat rata-rata mendapat rating 2,3 bintang dibanding 4,3 untuk yang tepat waktu, hanya 3% pelanggan yang pernah belanja lagi, dan dua segmen RFM bernilai tinggi menyumbang sekitar 56% revenue. Setiap temuan disertai rekomendasi konkret, dan dashboard memungkinkan semua metrik difilter per wilayah dan provinsi.",
+    },
+    techStack: [
+      "SQL",
+      "DuckDB",
+      "Python",
+      "pandas",
+      "Matplotlib",
+      "Plotly.js",
+      "Jupyter",
+    ],
+    bullets: {
+      en: [
+        "Modeled 8 raw tables into one clean order-level table in SQL: delivered orders only, complete months (Jan 2017 – Aug 2018), unique customer IDs, and duplicate reviews removed with ROW_NUMBER.",
+        "Showed that delivery delays drive bad reviews: late orders average 2.27 stars vs 4.29 on time, and 62% of late orders receive a 1–2 star review.",
+        "Found that the late-delivery rate jumped to 12% at Black Friday 2017 and 14–19% in Feb–Mar 2018, pointing to logistics capacity problems at demand peaks.",
+        "Measured retention with monthly cohort analysis: only 3.0% of 93,096 customers ordered twice, and every cohort keeps less than 1% in later months.",
+        "Segmented customers with RFM and found two high-value segments (about 30% of customers) that bring about 56% of revenue, with a targeted action for each.",
+        "Built an interactive dashboard (HTML + Plotly.js, hosted on GitHub Pages) with region and state filters, KPI cards, trends, and cohort and RFM views.",
+      ],
+      id: [
+        "Memodelkan 8 tabel mentah menjadi satu tabel bersih tingkat pesanan dengan SQL: hanya pesanan terkirim, bulan lengkap (Jan 2017 – Agu 2018), ID pelanggan unik, dan ulasan ganda dihapus dengan ROW_NUMBER.",
+        "Menunjukkan bahwa keterlambatan pengiriman memicu ulasan buruk: pesanan terlambat rata-rata mendapat 2,27 bintang dibanding 4,29 untuk yang tepat waktu, dan 62% pesanan terlambat mendapat ulasan 1–2 bintang.",
+        "Menemukan bahwa tingkat keterlambatan melonjak menjadi 12% saat Black Friday 2017 dan 14–19% pada Feb–Mar 2018, yang menunjukkan masalah kapasitas logistik saat permintaan memuncak.",
+        "Mengukur retensi dengan analisis cohort bulanan: hanya 3,0% dari 93.096 pelanggan yang belanja lebih dari sekali, dan setiap cohort mempertahankan kurang dari 1% pelanggan di bulan-bulan berikutnya.",
+        "Mengelompokkan pelanggan dengan RFM dan menemukan dua segmen bernilai tinggi (sekitar 30% pelanggan) yang menyumbang sekitar 56% revenue, lengkap dengan rekomendasi untuk masing-masing segmen.",
+        "Membangun dashboard interaktif (HTML + Plotly.js, di-hosting di GitHub Pages) dengan filter wilayah dan provinsi, kartu KPI, tren, serta tampilan cohort dan RFM.",
+      ],
+    },
+    meta: {
+      en: "Personal project · Solo · Nov 2026",
+      id: "Proyek pribadi · Mandiri · Nov 2026",
+    },
+    link: "https://mhmmdzul.github.io/olist-ecommerce-analysis/",
+    linkLabel: { en: "Live Dashboard", id: "Dashboard Interaktif" },
+    githubUrl: "https://github.com/mhmmdzul/olist-ecommerce-analysis",
+    image: "/projects/olist-dashboard.jpg",
+    notebookFile: "/projects/olist-ecommerce-analysis.ipynb",
+    datasetUrl: "https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce",
+    gallery: [
+      {
+        src: "/projects/olist-dashboard.jpg",
+        caption: {
+          en: "Interactive dashboard with region and state filters, KPI cards, and monthly trends.",
+          id: "Dashboard interaktif dengan filter wilayah dan provinsi, kartu KPI, dan tren bulanan.",
+        },
+      },
+      {
+        src: "/projects/olist-delivery-vs-review.jpg",
+        caption: {
+          en: "Average review score drops sharply as soon as an order arrives after its estimated date.",
+          id: "Rata-rata rating turun tajam begitu pesanan tiba melewati tanggal estimasi.",
+        },
+      },
+      {
+        src: "/projects/olist-late-rate.jpg",
+        caption: {
+          en: "Late-delivery rate by month, peaking at Black Friday 2017 and in Feb–Mar 2018.",
+          id: "Tingkat keterlambatan per bulan, memuncak saat Black Friday 2017 dan Feb–Mar 2018.",
+        },
+      },
+      {
+        src: "/projects/olist-cohort-retention.jpg",
+        caption: {
+          en: "Cohort retention: less than 1% of each monthly cohort buys again in later months.",
+          id: "Retensi cohort: kurang dari 1% dari setiap cohort bulanan yang belanja lagi di bulan berikutnya.",
+        },
+      },
+      {
+        src: "/projects/olist-rfm-segments.jpg",
+        caption: {
+          en: "RFM segments: two high-value groups hold about 56% of revenue.",
+          id: "Segmen RFM: dua kelompok bernilai tinggi menyumbang sekitar 56% revenue.",
+        },
+      },
+      {
+        src: "/projects/olist-monthly-revenue.jpg",
+        caption: {
+          en: "Monthly revenue grew quickly in 2017, peaked at Black Friday, then flattened in 2018.",
+          id: "Revenue bulanan tumbuh cepat di 2017, memuncak saat Black Friday, lalu stagnan di 2018.",
+        },
+      },
+    ],
+  },
 ];
 
-// Urutan tampil proyek: SwinConvNeXt, Face Recognition, Chatbot n8n, TSLA, Tank Robot
-export const projects = [0, 2, 3, 4, 1].map((i) => projectList[i]);
+// Urutan tampil proyek: SwinConvNeXt, Olist, Face Recognition, Chatbot n8n, TSLA, Tank Robot
+export const projects = [0, 5, 2, 3, 4, 1].map((i) => projectList[i]);
 export const certificateLabels = {
   en: { view: "View certificate", issued: "Issued", close: "Close" },
   id: { view: "Lihat sertifikat", issued: "Diterbitkan", close: "Tutup" },

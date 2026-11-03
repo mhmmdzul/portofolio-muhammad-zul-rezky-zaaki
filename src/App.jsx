@@ -668,7 +668,10 @@ export default function App() {
                       rel="noreferrer"
                       className="btn btn-ghost"
                     >
-                      {t.detailsLabel} ↗
+                      {current.linkLabel
+                        ? L(current.linkLabel)
+                        : t.detailsLabel}{" "}
+                      ↗
                     </a>
                   )}
                 </div>
