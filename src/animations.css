@@ -2631,3 +2631,16 @@ body,
 .project-highlight {
   color: var(--highlight);
 }
+
+/* ── 42. Penegasan di halaman detail proyek ── */
+
+.detail-highlight {
+  margin: 4px 0 10px;
+  font-size: 1rem;
+}
+.ps-item--solution {
+  border-left-color: var(--highlight);
+}
+.ps-item--solution .ps-label {
+  color: var(--highlight);
+}

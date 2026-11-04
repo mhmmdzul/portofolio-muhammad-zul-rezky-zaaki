@@ -682,6 +682,11 @@ export default function App() {
             <div className="detail-grid">
               <div className="detail-content">
                 <p className="project-category">{L(current.category)}</p>
+                {current.highlight && (
+                  <p className="project-highlight detail-highlight">
+                    {L(current.highlight)}
+                  </p>
+                )}
                 <h2 className="detail-title">{L(current.title)}</h2>
                 <p className="detail-desc">{L(current.description)}</p>
 
