@@ -331,6 +331,23 @@ const statIcons = [
 export default function App() {
   const [navOpen, setNavOpen] = useState(false);
   const [lang, setLang] = useState(DEFAULT_LANG);
+  const [theme, setTheme] = useState(() =>
+    typeof document !== "undefined" &&
+    document.documentElement.dataset.theme === "light"
+      ? "light"
+      : "dark",
+  );
+  useEffect(() => {
+    document.documentElement.dataset.theme = theme;
+    const meta = document.querySelector('meta[name="theme-color"]');
+    if (meta)
+      meta.setAttribute("content", theme === "light" ? "#f4f2ee" : "#141413");
+    try {
+      localStorage.setItem("theme", theme);
+    } catch (e) {
+      /* penyimpanan diblokir: tema tetap jalan tanpa disimpan */
+    }
+  }, [theme]);
   const [tab, setTab] = useState("projects");
   const [selectedProject, setSelectedProject] = useState(null);
   const [activeSection, setActiveSection] = useState("home");
@@ -574,6 +591,60 @@ export default function App() {
             </svg>
             <span className="header-cv-text">CV</span>
           </a>
+          <button
+            type="button"
+            className="theme-toggle"
+            onClick={() => setTheme((v) => (v === "light" ? "dark" : "light"))}
+            aria-label={
+              theme === "light"
+                ? lang === "id"
+                  ? "Ganti ke tema gelap"
+                  : "Switch to dark theme"
+                : lang === "id"
+                  ? "Ganti ke tema terang"
+                  : "Switch to light theme"
+            }
+            title={
+              theme === "light"
+                ? lang === "id"
+                  ? "Tema gelap"
+                  : "Dark theme"
+                : lang === "id"
+                  ? "Tema terang"
+                  : "Light theme"
+            }
+          >
+            {theme === "light" ? (
+              <svg
+                viewBox="0 0 24 24"
+                width="17"
+                height="17"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.8"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z" />
+              </svg>
+            ) : (
+              <svg
+                viewBox="0 0 24 24"
+                width="17"
+                height="17"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.8"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                aria-hidden="true"
+              >
+                <circle cx="12" cy="12" r="4" />
+                <path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" />
+              </svg>
+            )}
+          </button>
           <div className="lang-toggle">
             <button
               className={lang === "id" ? "active" : ""}
@@ -865,11 +936,7 @@ export default function App() {
             <section id="about" className="section" data-reveal>
               <div className="about-layout">
                 <div className="about-content">
-                  <h2 className="about-title">
-                    {t.aboutHeading}{" "}
-                    <span className="accent">{t.aboutHeadingAccent}</span>
-                    <span className="title-line" aria-hidden="true" />
-                  </h2>
+                  <h2 className="about-title">{t.aboutHeading}</h2>
                   <p className="about-subheading">
                     {t.aboutIntro} {profile.name}
                   </p>
@@ -924,10 +991,7 @@ export default function App() {
             {/* ── Portfolio ── */}
             <section id="portfolio" className="section" data-reveal>
               <div className="portfolio-header">
-                <h2 className="portfolio-title">
-                  {t.portfolioLead}{" "}
-                  <span className="accent">{t.portfolioAccent}</span>
-                </h2>
+                <h2 className="portfolio-title">{t.portfolioLead}</h2>
                 <div className="tabs">
                   <button
                     className={`tab ${tab === "projects" ? "active" : ""}`}
@@ -1090,10 +1154,7 @@ export default function App() {
               data-reveal
             >
               <div className="contact-header">
-                <h2 className="contact-title">
-                  {t.contactTitleLead}{" "}
-                  <span className="accent">{t.contactTitleAccent}</span>
-                </h2>
+                <h2 className="contact-title">{t.contactTitleLead}</h2>
                 <p className="contact-subtitle">{t.contactSubtitle}</p>
               </div>
 
@@ -1245,9 +1306,7 @@ export default function App() {
                 </div>
 
                 <form className="contact-form" onSubmit={handleContactSubmit}>
-                  <p className="contact-form-heading">
-                    <span className="accent">&gt;_</span> {t.sendMessageHeading}
-                  </p>
+                  <p className="contact-form-heading">{t.sendMessageHeading}</p>
 
                   {/* Perangkap bot — disembunyikan dari pengunjung */}
                   <input

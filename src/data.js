@@ -161,7 +161,7 @@ export const translations = {
     openToWork: "Open to work",
     bio: [
       "IT fresh graduate with hands-on experience across full-stack development, machine learning, and data processing, including a Full-Stack Developer internship at IPDN and a published IEEE conference paper on deep learning-based waste classification.",
-      "Beyond technical skills, I bring proven leadership experience as Vice Chair of a 500+ member student organization, sharpening my team management and cross-divisional coordination skills.",
+      "Beyond technical skills, I bring proven leadership experience as Vice President of a 500+ member student organization, sharpening my team management and cross-divisional coordination skills.",
     ],
     portfolioLead: "Portfolio",
     portfolioAccent: "Showcase.",
@@ -188,7 +188,7 @@ export const translations = {
     downloadNotebook: "Download Notebook",
     viewDataset: "View Dataset",
     viewGithub: "View on GitHub",
-    contactTitleLead: "Let's",
+    contactTitleLead: "Let's connect",
     contactTitleAccent: "Connect.",
     contactSubtitle:
       "Currently open for new opportunities. Whether you have a question, a project idea, or just want to say hi, I'll try my best to get back to you!",
@@ -256,7 +256,7 @@ export const translations = {
     downloadNotebook: "Unduh Notebook",
     viewDataset: "Lihat Dataset",
     viewGithub: "Lihat di GitHub",
-    contactTitleLead: "Mari",
+    contactTitleLead: "Mari terhubung",
     contactTitleAccent: "Terhubung.",
     contactSubtitle:
       "Terbuka untuk peluang baru. Baik ada pertanyaan, ide proyek, atau sekadar menyapa, saya akan usahakan membalas secepatnya!",

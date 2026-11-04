@@ -1,19 +1,49 @@
-@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@500;600;700;800&family=Instrument+Sans:wght@400;500;600;700&display=swap");
 
 :root {
-  --bg: #121317;
-  --surface: #1a1c21;
-  --ink: #f2f3f5;
-  --muted: #9497a1;
-  --line: #2b2e35;
-  --accent: #5b8cff;
-  --accent-soft: #1c2540;
+  /* D · Dark (default): charcoal, monochrome */
+  --bg: #141413;
+  --surface: #1c1c1b;
+  --surface-2: #242423;
+  --ink: #edebe6;
+  --ink-2: #c9c7c0;
+  --muted: #a3a19b;
+  --line: #2c2c2a;
+  --line-strong: #3d3d3a;
+  --accent: #edebe6;
+  --accent-soft: rgba(237, 235, 230, 0.07);
+  --on-accent: #141413;
+  --header-bg: rgba(20, 20, 19, 0.86);
+  --card-bg: #1f1f1e;
+  --success: #8fd3a8;
+  --danger: #f2998f;
 
-  --font-display: "Space Grotesk", sans-serif;
-  --font-body: "Inter", sans-serif;
-  --font-mono: "IBM Plex Mono", monospace;
+  --font-display: "Schibsted Grotesk", "Helvetica Neue", Arial, sans-serif;
+  --font-body: "Instrument Sans", "Helvetica Neue", Arial, sans-serif;
+  --font-mono: "Instrument Sans", "Helvetica Neue", Arial, sans-serif;
 
   --max-width: 920px;
+  color-scheme: dark;
+}
+
+/* E · Light: warm ivory, monochrome */
+:root[data-theme="light"] {
+  --bg: #f4f2ee;
+  --surface: #ffffff;
+  --surface-2: #ebe8e1;
+  --ink: #161513;
+  --ink-2: #3e3c38;
+  --muted: #5f5d58;
+  --line: #dcd9d1;
+  --line-strong: #c9c5bb;
+  --accent: #161513;
+  --accent-soft: rgba(22, 21, 19, 0.06);
+  --on-accent: #f4f2ee;
+  --header-bg: rgba(244, 242, 238, 0.88);
+  --card-bg: #ffffff;
+  --success: #1e7a4c;
+  --danger: #b42318;
+  color-scheme: light;
 }
 
 * {
@@ -64,7 +94,7 @@ a {
   align-items: center;
   gap: 16px;
   padding: 18px clamp(20px, 6vw, 64px);
-  background: rgba(18, 19, 23, 0.85);
+  background: var(--header-bg);
   backdrop-filter: blur(8px);
   border-bottom: 1px solid var(--line);
 }
@@ -115,7 +145,7 @@ a {
 
 .lang-toggle button.active {
   background: var(--accent);
-  color: #ffffff;
+  color: var(--on-accent);
 }
 
 .nav {
@@ -276,7 +306,7 @@ a {
 
 .btn-primary:hover {
   background: var(--accent);
-  color: #ffffff;
+  color: var(--on-accent);
 }
 
 .btn-ghost {
@@ -460,7 +490,7 @@ a {
   width: 8px;
   height: 8px;
   border-radius: 999px;
-  background: #34d399;
+  background: var(--accent);
 }
 
 @media (max-width: 720px) {
@@ -560,7 +590,7 @@ a {
 
 .tab.active {
   background: var(--accent);
-  color: #ffffff;
+  color: var(--on-accent);
 }
 
 /* Project cards */
@@ -585,19 +615,19 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #ffffff;
+  color: var(--on-accent);
 }
 
 .project-thumb--0 {
-  background: linear-gradient(135deg, #4f6df5, #7c5cff);
+  background: linear-gradient(135deg, var(--accent), var(--accent));
 }
 
 .project-thumb--1 {
-  background: linear-gradient(135deg, #14b8a6, #22c55e);
+  background: linear-gradient(135deg, var(--accent), var(--accent));
 }
 
 .project-thumb--2 {
-  background: linear-gradient(135deg, #64748b, #334155);
+  background: linear-gradient(135deg, var(--accent), var(--accent));
 }
 
 .project-thumb-img {
@@ -968,18 +998,18 @@ a {
 }
 
 .contact-card-icon--email {
-  background: rgba(91, 140, 255, 0.15);
+  background: color-mix(in srgb, var(--accent) 15%, transparent);
   color: var(--accent);
 }
 
 .contact-card-icon--wa {
-  background: rgba(37, 211, 102, 0.15);
-  color: #25d366;
+  background: color-mix(in srgb, var(--accent) 15%, transparent);
+  color: var(--accent);
 }
 
 .contact-card-icon--location {
-  background: rgba(167, 139, 250, 0.15);
-  color: #a78bfa;
+  background: color-mix(in srgb, var(--accent) 15%, transparent);
+  color: var(--accent);
 }
 
 .contact-card-label {
@@ -1074,8 +1104,8 @@ a {
   border: none;
   border-radius: 8px;
   padding: 14px 24px;
-  background: linear-gradient(90deg, #06b6d4, #22c55e);
-  color: #ffffff;
+  background: linear-gradient(90deg, var(--accent), var(--accent));
+  color: var(--on-accent);
   font-weight: 600;
   font-size: 1rem;
   display: flex;

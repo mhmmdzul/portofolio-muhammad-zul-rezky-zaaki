@@ -37,7 +37,12 @@
   height: 3px;
   transform-origin: 0 50%;
   transform: scaleX(var(--progress, 0));
-  background: linear-gradient(90deg, var(--accent), #22d3ee, #34d399);
+  background: linear-gradient(
+    90deg,
+    var(--accent),
+    var(--accent),
+    var(--accent)
+  );
   z-index: 50;
   pointer-events: none;
 }
@@ -139,7 +144,7 @@
   border-radius: inherit;
   background: radial-gradient(
     420px circle at var(--mx, 50%) var(--my, 50%),
-    rgba(91, 140, 255, 0.18),
+    color-mix(in srgb, var(--accent) 18%, transparent),
     transparent 45%
   );
   opacity: 0;
@@ -154,8 +159,9 @@
 
 .project-card:hover {
   translate: 0 -6px;
-  border-color: rgba(91, 140, 255, 0.5);
-  box-shadow: 0 18px 40px -18px rgba(91, 140, 255, 0.45);
+  border-color: color-mix(in srgb, var(--accent) 50%, transparent);
+  box-shadow: 0 18px 40px -18px
+    color-mix(in srgb, var(--accent) 45%, transparent);
 }
 
 .project-card:hover .project-thumb-img {
@@ -179,8 +185,9 @@
 .stat-card:hover,
 .contact-card:hover {
   translate: 0 -4px;
-  border-color: rgba(91, 140, 255, 0.45);
-  box-shadow: 0 14px 30px -18px rgba(91, 140, 255, 0.45);
+  border-color: color-mix(in srgb, var(--accent) 45%, transparent);
+  box-shadow: 0 14px 30px -18px
+    color-mix(in srgb, var(--accent) 45%, transparent);
 }
 
 .tech-chip {
@@ -223,7 +230,7 @@
 }
 
 .hero::after {
-  background: #22d3ee;
+  background: var(--accent);
   bottom: -190px;
   right: -110px;
   animation: drift 18s ease-in-out infinite alternate-reverse;
@@ -254,9 +261,9 @@
   background: conic-gradient(
     from var(--angle),
     var(--accent),
-    #22d3ee,
-    #34d399,
-    #a78bfa,
+    var(--accent),
+    var(--accent),
+    var(--accent),
     var(--accent)
   );
   animation:
@@ -462,7 +469,7 @@
     90deg,
     transparent,
     var(--line) 20%,
-    rgba(91, 140, 255, 0.45) 50%,
+    color-mix(in srgb, var(--accent) 45%, transparent) 50%,
     var(--line) 80%,
     transparent
   );
@@ -520,11 +527,11 @@
   transform-origin: 50% 0;
   padding: 24px 14px 16px;
   border-radius: 18px;
-  background: linear-gradient(165deg, #1f2433, #15171d 60%);
+  background: var(--card-bg);
   border: 1px solid rgba(255, 255, 255, 0.08);
   box-shadow:
     0 30px 60px -25px rgba(0, 0, 0, 0.75),
-    0 0 45px -12px rgba(91, 140, 255, 0.45);
+    0 0 45px -12px color-mix(in srgb, var(--accent) 45%, transparent);
   cursor: grab;
   touch-action: none;
   will-change: transform;
@@ -535,7 +542,7 @@
   cursor: grabbing;
   box-shadow:
     0 40px 70px -25px rgba(0, 0, 0, 0.8),
-    0 0 60px -10px rgba(91, 140, 255, 0.6);
+    0 0 60px -10px color-mix(in srgb, var(--accent) 60%, transparent);
 }
 
 @keyframes idcard-in {
@@ -714,11 +721,11 @@
 }
 
 .ps-item--problem {
-  border-left-color: #f87171;
+  border-left-color: var(--danger);
 }
 
 .ps-item--solution {
-  border-left-color: #34d399;
+  border-left-color: var(--success);
 }
 
 .ps-label {
@@ -730,11 +737,11 @@
 }
 
 .ps-item--problem .ps-label {
-  color: #f87171;
+  color: var(--danger);
 }
 
 .ps-item--solution .ps-label {
-  color: #34d399;
+  color: var(--success);
 }
 
 .ps-text {
@@ -776,7 +783,7 @@
 
 .project-nav-card:hover {
   translate: 0 -3px;
-  border-color: rgba(91, 140, 255, 0.5);
+  border-color: color-mix(in srgb, var(--accent) 50%, transparent);
 }
 
 .project-nav-label {
@@ -827,7 +834,7 @@
 
 .gallery-thumb:hover {
   translate: 0 -3px;
-  border-color: rgba(91, 140, 255, 0.5);
+  border-color: color-mix(in srgb, var(--accent) 50%, transparent);
 }
 
 .gallery-thumb img {
@@ -991,10 +998,10 @@
 .collage-item:focus-visible {
   z-index: 20;
   transform: rotate(0deg) scale(1.08);
-  border-color: rgba(91, 140, 255, 0.55);
+  border-color: color-mix(in srgb, var(--accent) 55%, transparent);
   box-shadow:
     0 30px 70px -20px rgba(0, 0, 0, 0.9),
-    0 0 0 1px rgba(91, 140, 255, 0.35);
+    0 0 0 1px color-mix(in srgb, var(--accent) 35%, transparent);
 }
 
 /* Foto lain meredup supaya fokus ke foto yang disorot */
@@ -1186,8 +1193,9 @@
 .cert-card:hover,
 .cert-card:focus-visible {
   translate: 0 -6px;
-  border-color: rgba(91, 140, 255, 0.5);
-  box-shadow: 0 18px 40px -18px rgba(91, 140, 255, 0.45);
+  border-color: color-mix(in srgb, var(--accent) 50%, transparent);
+  box-shadow: 0 18px 40px -18px
+    color-mix(in srgb, var(--accent) 45%, transparent);
 }
 
 .cert-card:hover img {
@@ -1308,9 +1316,9 @@
   display: inline-block;
   padding: 5px 12px;
   border-radius: 999px;
-  border: 1px solid rgba(52, 211, 153, 0.35);
-  background: rgba(52, 211, 153, 0.08);
-  color: #34d399;
+  border: 1px solid color-mix(in srgb, var(--accent) 35%, transparent);
+  background: color-mix(in srgb, var(--accent) 8%, transparent);
+  color: var(--accent);
   font-family: var(--font-mono);
   font-size: 0.72rem;
   letter-spacing: 0.08em;
@@ -1368,8 +1376,8 @@
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background: #34d399;
-  box-shadow: 0 0 8px rgba(52, 211, 153, 0.6);
+  background: var(--accent);
+  box-shadow: 0 0 8px color-mix(in srgb, var(--accent) 60%, transparent);
 }
 
 .exp-tags {
@@ -1448,27 +1456,27 @@
   height: 30px;
   border-radius: 9px;
   color: var(--accent);
-  background: rgba(91, 140, 255, 0.12);
+  background: color-mix(in srgb, var(--accent) 12%, transparent);
 }
 .techstack-heading-icon--web {
-  color: #34d399;
-  background: rgba(52, 211, 153, 0.12);
+  color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 12%, transparent);
 }
 .techstack-heading-icon--ml {
-  color: #c084fc;
-  background: rgba(192, 132, 252, 0.12);
+  color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 12%, transparent);
 }
 .techstack-heading-icon--data {
-  color: #f472b6;
-  background: rgba(244, 114, 182, 0.12);
+  color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 12%, transparent);
 }
 .techstack-heading-icon--db {
-  color: #fbbf24;
-  background: rgba(251, 191, 36, 0.12);
+  color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 12%, transparent);
 }
 .techstack-heading-icon--tools {
-  color: #fb923c;
-  background: rgba(251, 146, 60, 0.12);
+  color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 12%, transparent);
 }
 
 .techstack-grid {
@@ -1501,9 +1509,10 @@
 
 .tech-tile:hover {
   transform: translateY(-4px);
-  border-color: rgba(91, 140, 255, 0.5);
-  background: rgba(91, 140, 255, 0.06);
-  box-shadow: 0 10px 24px -12px rgba(91, 140, 255, 0.55);
+  border-color: color-mix(in srgb, var(--accent) 50%, transparent);
+  background: color-mix(in srgb, var(--accent) 6%, transparent);
+  box-shadow: 0 10px 24px -12px
+    color-mix(in srgb, var(--accent) 55%, transparent);
 }
 
 .tech-tile-img {
@@ -1543,10 +1552,10 @@
   border-radius: 9px;
   background: linear-gradient(
     135deg,
-    rgba(91, 140, 255, 0.25),
-    rgba(192, 132, 252, 0.25)
+    color-mix(in srgb, var(--accent) 25%, transparent),
+    color-mix(in srgb, var(--accent) 25%, transparent)
   );
-  border: 1px solid rgba(91, 140, 255, 0.35);
+  border: 1px solid color-mix(in srgb, var(--accent) 35%, transparent);
   color: var(--ink);
   font-family: var(--font-mono);
   font-size: 0.68rem;
@@ -1639,15 +1648,15 @@ a.contact-card {
 }
 
 .form-status--success {
-  color: #34d399;
-  background: rgba(52, 211, 153, 0.1);
-  border: 1px solid rgba(52, 211, 153, 0.3);
+  color: var(--success);
+  background: color-mix(in srgb, var(--success) 10%, transparent);
+  border: 1px solid color-mix(in srgb, var(--success) 30%, transparent);
 }
 
 .form-status--error {
-  color: #f87171;
-  background: rgba(248, 113, 113, 0.1);
-  border: 1px solid rgba(248, 113, 113, 0.3);
+  color: var(--danger);
+  background: color-mix(in srgb, var(--danger) 10%, transparent);
+  border: 1px solid color-mix(in srgb, var(--danger) 30%, transparent);
 }
 
 @keyframes status-in {
@@ -1732,7 +1741,7 @@ a.contact-card {
   background:
     radial-gradient(
       ellipse at 50% 40%,
-      rgba(91, 140, 255, 0.12),
+      color-mix(in srgb, var(--accent) 12%, transparent),
       transparent 60%
     ),
     var(--bg);
@@ -1976,7 +1985,7 @@ section[id] {
   height: 34px;
   border-radius: 9px;
   background: var(--accent);
-  color: #fff;
+  color: var(--on-accent);
   font-family: var(--font-display);
   font-size: 0.85rem;
   font-weight: 700;
@@ -2045,7 +2054,7 @@ section[id] {
 .back-to-top:hover {
   border-color: var(--accent);
   background: var(--accent);
-  color: #fff;
+  color: var(--on-accent);
 }
 
 .back-to-top:hover svg {
@@ -2110,7 +2119,7 @@ section[id] {
   background: linear-gradient(
     90deg,
     var(--line),
-    rgba(91, 140, 255, 0.35),
+    color-mix(in srgb, var(--accent) 35%, transparent),
     transparent
   );
 }
@@ -2125,9 +2134,9 @@ section[id] {
   margin: 2px 0 8px;
   padding: 4px 10px;
   border-radius: 999px;
-  border: 1px solid rgba(52, 211, 153, 0.35);
-  background: rgba(52, 211, 153, 0.1);
-  color: #34d399;
+  border: 1px solid color-mix(in srgb, var(--accent) 35%, transparent);
+  background: color-mix(in srgb, var(--accent) 10%, transparent);
+  color: var(--accent);
   font-family: var(--font-mono);
   font-size: 0.72rem;
   font-weight: 600;
@@ -2192,7 +2201,7 @@ section[id] {
 .header-cv:hover {
   border-color: var(--accent);
   background: var(--accent);
-  color: #fff;
+  color: var(--on-accent);
 }
 
 /* Di HP: tombol CV jadi ikon saja supaya header tidak sesak */
@@ -2246,7 +2255,7 @@ section[id] {
 
 /* Garis tepi biru */
 .idcard-strap-edge {
-  stroke: #5b8cff;
+  stroke: var(--accent);
   stroke-opacity: 0.9;
 }
 
@@ -2396,4 +2405,193 @@ section#contact {
   section#portfolio {
     padding-top: clamp(24px, 5vh, 56px);
   }
+}
+
+/* ── 39. Monokrom (D gelap / E terang): hapus glow, label mesin ketik, pil ── */
+
+/* Efek cahaya buram & bingkai berputar dimatikan */
+.hero::before,
+.hero::after,
+.hero-visual::before,
+.hero-visual::after,
+.project-card::before {
+  display: none;
+}
+.intro {
+  background: var(--bg);
+}
+.scroll-progress {
+  background: var(--ink);
+}
+.section:not(.project-detail)::before {
+  background: var(--line);
+}
+
+/* Bayangan netral, bukan glow berwarna */
+.project-card:hover,
+.contact-card:hover,
+.cert-card:hover,
+.cert-card:focus-visible,
+.tech-tile:hover {
+  border-color: var(--line-strong);
+  box-shadow: 0 18px 36px -22px rgba(0, 0, 0, 0.45);
+}
+.tech-tile:hover {
+  background: var(--accent-soft);
+}
+.idcard {
+  border-color: var(--line);
+  box-shadow: 0 30px 60px -28px rgba(0, 0, 0, 0.55);
+}
+.idcard.is-dragging {
+  box-shadow: 0 40px 70px -28px rgba(0, 0, 0, 0.6);
+}
+.idcard-strap-core {
+  stroke: #2a2a28;
+}
+
+/* Font: judul Schibsted Grotesk, teks Instrument Sans */
+.hero-name,
+.about-title,
+.portfolio-title,
+.contact-title {
+  font-family: var(--font-display);
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  text-wrap: balance;
+}
+.title-line {
+  display: none;
+}
+
+/* Label kecil: teks biasa, tanpa huruf kapital semua dan tanpa warna */
+.hero-kicker {
+  color: var(--muted);
+  font-size: 1.05rem;
+  letter-spacing: 0;
+}
+.hero-role {
+  font-family: var(--font-display);
+  color: var(--ink);
+}
+.project-category,
+.cert-card-issuer,
+.exp-date-pill,
+.ps-label,
+.exp-others-heading {
+  text-transform: none;
+  letter-spacing: 0;
+}
+.project-category {
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+.cert-card-issuer {
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 0.78rem;
+}
+.exp-date-pill {
+  border-color: var(--line);
+  background: transparent;
+  color: var(--muted);
+}
+
+/* Hasil proyek: teks tebal biasa, bukan badge hijau */
+.project-highlight {
+  border: 0;
+  background: transparent;
+  padding: 0;
+  border-radius: 0;
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+/* Tab: garis bawah, bukan pil */
+.tabs {
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-radius: 0;
+  padding: 0;
+  gap: 4px;
+}
+.tab {
+  border-radius: 0;
+  background: transparent;
+  color: var(--muted);
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+}
+.tab:hover {
+  color: var(--ink);
+  background: transparent;
+}
+.tab.active {
+  background: transparent;
+  color: var(--ink);
+  border-bottom-color: var(--ink);
+  font-weight: 600;
+}
+
+/* Thumbnail tanpa gambar: abu-abu netral, bukan gradasi warna */
+.project-thumb--0,
+.project-thumb--1,
+.project-thumb--2 {
+  background: var(--surface-2);
+  color: var(--muted);
+}
+
+/* Problem & Solution: dibedakan tebal-tipis, bukan merah-hijau */
+.ps-item--problem {
+  border-left-color: var(--line-strong);
+}
+.ps-item--solution {
+  border-left-color: var(--ink);
+}
+.ps-item--problem .ps-label,
+.ps-item--solution .ps-label {
+  color: var(--muted);
+}
+
+/* Titik "Open to work" */
+.status-dot {
+  background: #ffffff;
+}
+
+/* Tombol ganti tema */
+.theme-toggle {
+  display: inline-grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--ink);
+  cursor: pointer;
+  transition:
+    background 0.25s,
+    color 0.25s,
+    border-color 0.25s;
+}
+.theme-toggle:hover {
+  border-color: var(--ink);
+}
+.theme-toggle:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 2px;
+}
+
+/* Transisi halus saat tema diganti */
+body,
+.header,
+.project-card,
+.contact-card,
+.idcard {
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease;
 }
