@@ -9,7 +9,24 @@
       name="description"
       content="Portfolio of Muhammad Zul Rezky Zaaki, Data Analyst & AI Engineer. Deep learning, computer vision, and data-driven projects."
     />
-    <meta name="theme-color" content="#121317" />
+    <meta name="theme-color" content="#141413" />
+    <script>
+      // Pasang tema sebelum halaman tampil supaya tidak berkedip
+      (function () {
+        var t = null;
+        try {
+          t = localStorage.getItem("theme");
+        } catch (e) {}
+        if (t !== "light" && t !== "dark") {
+          t =
+            window.matchMedia &&
+            window.matchMedia("(prefers-color-scheme: light)").matches
+              ? "light"
+              : "dark";
+        }
+        document.documentElement.dataset.theme = t;
+      })();
+    </script>
     <meta
       property="og:title"
       content="Muhammad Zul Rezky Zaaki | Data Analyst & AI Engineer"
