@@ -937,9 +937,6 @@ export default function App() {
               <div className="about-layout">
                 <div className="about-content">
                   <h2 className="about-title">{t.aboutHeading}</h2>
-                  <p className="about-subheading">
-                    {t.aboutIntro} {profile.name}
-                  </p>
                   {t.bio.map((p, i) => (
                     <p key={i} className="about-bio-text">
                       {p}
