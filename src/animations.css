@@ -2619,3 +2619,15 @@ body,
   transform: translateX(-50%);
   white-space: nowrap;
 }
+
+/* ── 41. Warna penegasan untuk baris hasil proyek ── */
+
+:root {
+  --highlight: #8cc5a4;
+}
+:root[data-theme="light"] {
+  --highlight: #2f7a55;
+}
+.project-highlight {
+  color: var(--highlight);
+}
